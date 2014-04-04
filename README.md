@@ -1,6 +1,9 @@
 ## UmbrellawebMailerBundle
 
-Provides conveniently configure email parts. If you are looking for a light bundle to create emails with ``html`` body this is what you need.
+UmbrellawebMailerBundle provides a light & easy way to send styled html emails via  Symfony 2 SwiftmailerBundle. 
+It also allows to set up global mail sending parameters, such as sender email & name, encoding, so that you do not have to pass them every time you build a message. 
+Basically all you need is to create a template for email & pass its name to mailer service along with some custom email parameters.
+So, If you are looking for a light bundle to send emails with html body this is what you need.
 
 ## Requirements
 
