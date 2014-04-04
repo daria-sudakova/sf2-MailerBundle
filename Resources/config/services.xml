@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="umbrellaweb.mailer.class">Umbrellaweb\Bundle\MailerBundle\Mailer\Mailer</parameter>
+    </parameters>
+
+    <services>
+        <service id="umbrellaweb.mailer" class="%umbrellaweb.mailer.class%">
+            <argument type="service" id="mailer"/>
+            <argument type="service" id="templating"/>
+            <argument type="collection" key="params">
+                <argument key="charset">%uw_mailer.charset%</argument>
+                <argument key="content_type">%uw_mailer.content_type%</argument>
+                <argument key="sender_email">%uw_mailer.sender_email%</argument>
+                <argument key="sender_name">%uw_mailer.sender_name%</argument>
+            </argument>
+        </service>
+    </services>
+</container>
