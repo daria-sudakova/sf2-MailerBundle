@@ -10,6 +10,30 @@ Provides conveniently configure email parts. If you are looking for a light bund
 
 ## Installation
 
+Add the ``umbrella-web/sf2-mailer-bundle`` package to your require section in the ``composer.json`` file.
+
+    "require": {
+        // ...
+        "umbrella-web/sf2-mailer-bundle": "dev-master"
+    }
+
+Update package
+
+    $ composer update umbrella-web/sf2-mailer-bundle
+
+Add Umbrella-web Mailer Bundle into app/AppKernel.php
+
+    <?php
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+            new Umbrellaweb\Bundle\MailerBundle\UmbrellawebMailerBundle(),
+            // ...
+        );
+        ...
+    }
+
 ## Configuration 
 
 Available optional configuration settings which you can use in your ``app/config/config.yml``
